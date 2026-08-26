@@ -34,10 +34,8 @@ export function FounderSection() {
     // ── Reduced from py-20 sm:py-28 to py-12 sm:py-16 ─────────────────────
     <section id="leadership" className="bg-maroon py-12 text-maroon-foreground sm:py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-
         {/* ── Profile Hero Block ──────────────────────────────────────────── */}
         <div className="grid gap-10 lg:grid-cols-12 lg:items-center lg:gap-14">
-
           {/* Portrait Column */}
           <div className="lg:col-span-5">
             <Reveal>
@@ -154,21 +152,24 @@ export function FounderSection() {
           style={{ gridTemplateRows: expanded ? "1fr" : "0fr" }}
         >
           <div className="overflow-hidden">
-
             {/* Credentials Grid */}
             <div className="grid gap-6 md:grid-cols-3">
-
               {/* Education */}
               <div className="flex h-full flex-col rounded-2xl border border-white/10 bg-black/25 p-6 backdrop-blur-xs transition-colors hover:border-gold/30">
                 <div className="flex items-center gap-3">
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gold/15 text-gold">
                     <GraduationCap className="h-5 w-5" />
                   </span>
-                  <h3 className="font-[family-name:var(--font-display)] text-xl text-maroon-foreground">Education</h3>
+                  <h3 className="font-[family-name:var(--font-display)] text-xl text-maroon-foreground">
+                    Education
+                  </h3>
                 </div>
                 <ul className="mt-5 flex-1 space-y-3 text-sm text-maroon-foreground/85">
                   {founderData.education.map((item, i) => (
-                    <li key={i} className="border-t border-white/10 pt-2.5 first:border-0 first:pt-0">
+                    <li
+                      key={i}
+                      className="border-t border-white/10 pt-2.5 first:border-0 first:pt-0"
+                    >
                       <p className="font-medium text-maroon-foreground">{item.degree}</p>
                       {item.institution && (
                         <p className="text-xs text-gold/90">{item.institution}</p>
@@ -184,11 +185,16 @@ export function FounderSection() {
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gold/15 text-gold">
                     <Award className="h-5 w-5" />
                   </span>
-                  <h3 className="font-[family-name:var(--font-display)] text-xl text-maroon-foreground">Ministry &amp; Leadership</h3>
+                  <h3 className="font-[family-name:var(--font-display)] text-xl text-maroon-foreground">
+                    Ministry &amp; Leadership
+                  </h3>
                 </div>
                 <ul className="mt-5 flex-1 space-y-3 text-sm text-maroon-foreground/85">
                   {founderData.leadership.map((item, i) => (
-                    <li key={i} className="flex items-start gap-2.5 border-t border-white/10 pt-2.5 first:border-0 first:pt-0">
+                    <li
+                      key={i}
+                      className="flex items-start gap-2.5 border-t border-white/10 pt-2.5 first:border-0 first:pt-0"
+                    >
                       <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
                       <span>{item}</span>
                     </li>
@@ -202,12 +208,16 @@ export function FounderSection() {
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gold/15 text-gold">
                     <BookOpen className="h-5 w-5" />
                   </span>
-                  <h3 className="font-[family-name:var(--font-display)] text-xl text-maroon-foreground">Academic &amp; Research</h3>
+                  <h3 className="font-[family-name:var(--font-display)] text-xl text-maroon-foreground">
+                    Academic &amp; Research
+                  </h3>
                 </div>
                 <div className="mt-5 flex-1 space-y-3.5 text-sm text-maroon-foreground/85 leading-relaxed">
                   <p>{founderData.academicResearch.overview}</p>
                   <div className="border-t border-white/10 pt-3">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-gold">Key Highlights</p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-gold">
+                      Key Highlights
+                    </p>
                     <ul className="mt-2 space-y-1.5 text-xs text-maroon-foreground/80">
                       {founderData.academicResearch.keyVenues.map((venue, idx) => (
                         <li key={idx} className="flex items-center gap-2">
@@ -245,9 +255,14 @@ export function FounderSection() {
                 </div>
                 <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                   {founderData.ministryHighlights.map((highlight, index) => (
-                    <div key={index} className="flex items-start gap-3 rounded-xl border border-white/5 bg-white/5 p-4 transition-colors hover:border-gold/30 hover:bg-white/10">
+                    <div
+                      key={index}
+                      className="flex items-start gap-3 rounded-xl border border-white/5 bg-white/5 p-4 transition-colors hover:border-gold/30 hover:bg-white/10"
+                    >
                       <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-                      <span className="text-sm leading-snug text-maroon-foreground/90">{highlight}</span>
+                      <span className="text-sm leading-snug text-maroon-foreground/90">
+                        {highlight}
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -258,19 +273,22 @@ export function FounderSection() {
             <div className="mt-8 pb-4">
               <div className="relative overflow-hidden rounded-3xl border border-gold/40 bg-gradient-to-r from-black/50 via-black/35 to-black/50 p-6 sm:p-10 text-center backdrop-blur-xs">
                 <div className="mx-auto max-w-3xl">
-                  <span className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">Founder's Vision</span>
+                  <span className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">
+                    Founder's Vision
+                  </span>
                   <p className="mt-3 font-[family-name:var(--font-display)] text-lg leading-relaxed text-maroon-foreground sm:text-xl md:text-2xl font-light">
                     "{founderData.vision}"
                   </p>
                   <div className="mt-5 flex items-center justify-center gap-2">
                     <span className="h-px w-12 bg-gold/40" />
-                    <span className="text-xs uppercase tracking-widest text-gold font-medium">{founderData.name}</span>
+                    <span className="text-xs uppercase tracking-widest text-gold font-medium">
+                      {founderData.name}
+                    </span>
                     <span className="h-px w-12 bg-gold/40" />
                   </div>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>

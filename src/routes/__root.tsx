@@ -9,6 +9,7 @@ import {
 } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
 import { ArrowUp } from "lucide-react";
+import { Toaster } from "sonner";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -138,7 +139,7 @@ function RootComponent() {
       const scrollY = window.scrollY;
       const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
       const progress = totalHeight > 0 ? (scrollY / totalHeight) * 100 : 0;
-      
+
       setScrollProgress(progress);
       setShowBackToTop(scrollY > 400);
     };
@@ -154,19 +155,34 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       {/* Scroll Progress Bar */}
-      <div 
-        className="fixed top-0 left-0 h-1 bg-gold z-[100] transition-all duration-150 ease-out" 
-        style={{ width: `${scrollProgress}%` }} 
+      <div
+        className="fixed top-0 left-0 h-1 bg-gold z-[100] transition-all duration-150 ease-out"
+        style={{ width: `${scrollProgress}%` }}
       />
 
       {/* Back to Top Button */}
-      <button 
+      <button
         onClick={scrollToTop}
-        className={`fixed bottom-6 right-6 z-50 flex h-11 w-11 items-center justify-center rounded-full bg-gold text-gold-foreground shadow-lg transition-all duration-300 hover:-translate-y-1 ${showBackToTop ? 'opacity-100 visible' : 'opacity-0 invisible translate-y-4'}`}
+        className={`fixed bottom-6 right-6 z-50 flex h-11 w-11 items-center justify-center rounded-full bg-gold text-gold-foreground shadow-lg transition-all duration-300 hover:-translate-y-1 ${showBackToTop ? "opacity-100 visible" : "opacity-0 invisible translate-y-4"}`}
         aria-label="Back to top"
       >
         <ArrowUp className="h-5 w-5" />
       </button>
+
+      {/* Toast notifications (application flow feedback) */}
+      <Toaster
+        theme="dark"
+        position="bottom-center"
+        richColors
+        closeButton
+        toastOptions={{
+          style: {
+            background: "var(--card)",
+            border: "1px solid var(--border)",
+            color: "var(--foreground)",
+          },
+        }}
+      />
 
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />

@@ -30,9 +30,7 @@ export function GallerySection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-40 sm:opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               <div className="absolute inset-x-4 bottom-4 translate-y-0 sm:translate-y-8 sm:opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                <span className="text-sm font-semibold text-foreground">
-                  {item.label}
-                </span>
+                <span className="text-sm font-semibold text-foreground">{item.label}</span>
                 <p className="mt-1 text-xs text-foreground/70">
                   Institute of Christian Studies and Research
                 </p>

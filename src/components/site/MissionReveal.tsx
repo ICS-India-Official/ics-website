@@ -19,13 +19,13 @@ export function MissionReveal() {
       frame = 0;
       const rect = container.getBoundingClientRect();
       const vh = window.innerHeight;
-      
+
       // Calculate how far the user has scrolled through the tall container
       const totalScrollableDistance = rect.height - vh;
-      
+
       // Start lighting up when the container hits the top of the screen
-      const scrolled = -rect.top; 
-      
+      const scrolled = -rect.top;
+
       const raw = scrolled / totalScrollableDistance;
       setProgress(Math.min(1, Math.max(0, raw)));
     };
@@ -61,11 +61,7 @@ export function MissionReveal() {
               <span
                 key={`${word}-${i}`}
                 className={`transition-colors duration-300 ${
-                  gold
-                    ? "text-gold"
-                    : on
-                      ? "text-foreground"
-                      : "text-muted-foreground/35"
+                  gold ? "text-gold" : on ? "text-foreground" : "text-muted-foreground/35"
                 }`}
               >
                 {word}{" "}

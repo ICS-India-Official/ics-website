@@ -1,5 +1,6 @@
 import { siteConfig } from "@/config/site";
 import { Facebook, Youtube, MessageCircle } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 
 export function Footer() {
   return (
@@ -14,7 +15,11 @@ export function Footer() {
             NATA Accredited
           </span>
           <div className="mt-6 flex items-center gap-4">
-            <a href="#" className="text-muted-foreground hover:text-gold transition-colors" aria-label="Facebook">
+            <a
+              href="#"
+              className="text-muted-foreground hover:text-gold transition-colors"
+              aria-label="Facebook"
+            >
               <Facebook className="h-5 w-5" />
             </a>
             <a
@@ -56,9 +61,14 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <a href="#admissions" className="hover:text-foreground">
+              <Link to="/students" className="hover:text-foreground">
+                Our Students
+              </Link>
+            </li>
+            <li>
+              <Link to="/apply" className="hover:text-foreground">
                 Admissions
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

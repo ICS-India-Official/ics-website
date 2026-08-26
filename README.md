@@ -174,3 +174,55 @@ cd <repository-name>
 npm i
 npm run dev
 ```
+
+---
+
+## Admissions Backend (PostgreSQL)
+
+The two-stage application flow persists to PostgreSQL:
+
+1. **Stage 1** (home page card / /apply gate): name, mobile, email -> pplication_leads
+2. **Stage 2** (/apply wizard): full application -> pplications (linked back to its lead)
+
+### Setup
+
+1. Provision any managed Postgres (Neon, Supabase, RDS) and copy the pooled connection string.
+2. Set the environment variable:
+
+   `DATABASE_URL=postgres://user:pass@host/db?sslmode=require`
+
+   Locally: copy .env.example to .env. On Render it is set in the dashboard (see
+   ender.yaml). On Lovable/Cloudflare add it as a secret.
+
+3. Tables are created automatically on first request. The canonical schema lives in db/schema.sql.
+
+### Behavior without a database
+
+If DATABASE_URL is unset or unreachable, applications are never lost: the server logs the payload for manual recovery, the applicant still receives a reference number (ICS-YYYY-XXXXXX), and drafts survive in the browser via localStorage.
+
+### API surface
+
+| Route            | Method | Purpose                  |
+| ---------------- | ------ | ------------------------ |
+| /api/lead        | POST   | Stage-1 basic details    |
+| /api/application | POST   | Stage-2 full application |
+
+### Staff Console (`/admin`)
+
+Passcode-protected dashboard for the admissions office:
+
+- **Applications table** — every submission with reference code, applicant, course, inline
+  status control (`submitted → under_review → accepted → rejected → enrolled`), internal
+  notes, and an **Enrol** action that converts an accepted application into a student.
+- **Students register** — add students manually, change status (active / alumni / withdrawn),
+  toggle inclusion in the public directory, or remove entries.
+- Live stats (applications, pending review, students, enquiries).
+
+Set `ADMIN_PASSCODE` in the environment (Render → Environment, or `.env` locally).
+The page is `noindex`; sessions are signed, HttpOnly cookies expiring after 12 hours.
+
+### Public students directory (`/students`)
+
+A dedicated section listing enrolled students who have consented
+(`public_directory = true`, toggled in the Staff Console), grouped by programme.
+Only names, course, city and status are exposed — never contact details.
