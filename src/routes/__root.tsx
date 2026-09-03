@@ -163,7 +163,7 @@ function RootComponent() {
       {/* Back to Top Button */}
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-6 right-6 z-50 flex h-11 w-11 items-center justify-center rounded-full bg-gold text-gold-foreground shadow-lg transition-all duration-300 hover:-translate-y-1 ${showBackToTop ? "opacity-100 visible" : "opacity-0 invisible translate-y-4"}`}
+        className={`fixed bottom-6 right-6 z-40 flex h-11 w-11 items-center justify-center rounded-full bg-gold text-gold-foreground shadow-lg transition-all duration-300 hover:-translate-y-1 ${showBackToTop ? "opacity-100 visible" : "opacity-0 invisible translate-y-4"}`}
         aria-label="Back to top"
       >
         <ArrowUp className="h-5 w-5" />

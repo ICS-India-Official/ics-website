@@ -9,7 +9,7 @@ export const programs: Program[] = [
     level: "Undergraduate",
     duration: "3 Years",
     semesters: "6 Semesters",
-    tuition: "₹7,000 / year",
+    tuition: "₹7,000 / year (Total: ₹21,000)",
     qualification: "10th + Inter or equivalent",
     cta: "Apply to B.Th.",
     terms: [
@@ -90,7 +90,7 @@ export const programs: Program[] = [
     level: "Graduate · Ministry track",
     duration: "2 Years",
     semesters: "4 Semesters",
-    tuition: "₹10,000 / year",
+    tuition: "₹11,500 / year (Total: ₹23,000)",
     qualification: "B.Th. or 10th + Inter or equivalent + Degree",
     cta: "Apply to M.Div.",
     terms: [
@@ -157,7 +157,7 @@ export const programs: Program[] = [
     level: "Post-graduate · Research-oriented",
     duration: "2 Years",
     semesters: "4 Semesters",
-    tuition: "₹11,500 / year",
+    tuition: "₹13,500 / year (Total: ₹27,000)",
     qualification: "M.Div. or 10th + Inter or equivalent + Degree + B.Th.",
     cta: "Apply to M.Th.",
     terms: [
@@ -224,7 +224,7 @@ export const programs: Program[] = [
     level: "Doctoral · Research & Thesis",
     duration: "2 Years",
     semesters: "4 Semesters",
-    tuition: "₹12,500 / year",
+    tuition: "₹20,000 / year (Total: ₹40,000)",
     qualification: "M.Th. or Post Graduation with any theological qualification",
     cta: "Apply to Ph.D.",
     terms: [

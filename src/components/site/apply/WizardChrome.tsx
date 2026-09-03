@@ -139,7 +139,7 @@ export function StepRail({ stepIndex }: { stepIndex: number }) {
         </a>
         <p className="flex items-start gap-2.5">
           <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold/70" aria-hidden />
-          Labbipet, Vijayawada, NTR Dist., A.P.
+          {siteConfig.location}
         </p>
       </div>
 

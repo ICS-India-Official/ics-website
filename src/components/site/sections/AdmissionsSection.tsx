@@ -23,7 +23,7 @@ const HOW_IT_WORKS = [
 
 export function AdmissionsSection() {
   return (
-    <section id="admissions" className="bg-background py-14 sm:py-20">
+    <section id="admissions" className="bg-background scroll-mt-24 py-14 sm:py-20">
       <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20">
         {/* ── Left: pitch + process + contact ──────────────────────── */}
         <Reveal>

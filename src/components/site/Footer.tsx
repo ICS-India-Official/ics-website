@@ -9,7 +9,7 @@ export function Footer() {
         <div>
           <h3 className="text-lg">{siteConfig.name}</h3>
           <p className="mt-3 text-sm text-muted-foreground">
-            Training and equipping ministers of the Gospel in Vijayawada since our founding.
+            Equipping the saints for His ministry
           </p>
           <span className="mt-4 inline-flex rounded-full border border-gold/40 px-3 py-1 text-xs text-gold">
             NATA Accredited
@@ -51,18 +51,28 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <a href="#leadership" className="hover:text-foreground">
-                Founder & Leadership
-              </a>
+              <Link to="/about/vision" className="hover:text-foreground">
+                Vision
+              </Link>
+            </li>
+            <li>
+              <Link to="/about/founder" className="hover:text-foreground">
+                Founder Director
+              </Link>
+            </li>
+            <li>
+              <Link to="/about/advisor" className="hover:text-foreground">
+                Senior Advisor
+              </Link>
             </li>
             <li>
               <a href="#programs" className="hover:text-foreground">
-                Degree Programs
+                Courses
               </a>
             </li>
             <li>
-              <Link to="/students" className="hover:text-foreground">
-                Our Students
+              <Link to="/gallery" className="hover:text-foreground">
+                Gallery
               </Link>
             </li>
             <li>

@@ -1,27 +1,26 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
-import { StudentsDirectory } from "@/components/site/sections/StudentsDirectory";
+import { GallerySection } from "@/components/site/sections/GallerySection";
 import { BackToHome } from "@/components/site/BackToHome";
 import { siteConfig } from "@/config/site";
 
-export const Route = createFileRoute("/students")({
+export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: `Our Students | ${siteConfig.name}` },
+      { title: `Campus Gallery | ${siteConfig.name}` },
       {
         name: "description",
         content:
-          "Meet the students of the Institute of Christian Studies & Research — men and women training for ministry across C.Th. to Ph.D. programmes.",
+          "Moments from student life, worship, classes, and convocation at the Institute of Christian Studies and Research.",
       },
-      { property: "og:title", content: `Our Students | ${siteConfig.name}` },
-      { property: "og:type", content: "website" },
+      { property: "og:title", content: `Campus Gallery | ${siteConfig.name}` },
     ],
   }),
-  component: StudentsPage,
+  component: GalleryPage,
 });
 
-function StudentsPage() {
+function GalleryPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
@@ -29,7 +28,7 @@ function StudentsPage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 mb-4">
           <BackToHome />
         </div>
-        <StudentsDirectory />
+        <GallerySection />
       </main>
       <Footer />
     </div>

@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { Link } from "@tanstack/react-router";
 import { Reveal } from "@/components/site/Reveal";
 import { founderData } from "@/data/founder";
 import pastorImg from "@/assets/pastor-david-anil-kumar.png";
@@ -14,6 +15,7 @@ import {
   Compass,
   ChevronDown,
   ChevronUp,
+  ArrowRight,
 } from "lucide-react";
 
 export function FounderSection() {
@@ -32,7 +34,7 @@ export function FounderSection() {
 
   return (
     // ── Reduced from py-20 sm:py-28 to py-12 sm:py-16 ─────────────────────
-    <section id="leadership" className="bg-maroon py-12 text-maroon-foreground sm:py-16">
+    <section id="leadership" className="bg-maroon scroll-mt-24 py-12 text-maroon-foreground sm:py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* ── Profile Hero Block ──────────────────────────────────────────── */}
         <div className="grid gap-10 lg:grid-cols-12 lg:items-center lg:gap-14">
@@ -127,22 +129,13 @@ export function FounderSection() {
                            right 50% = --maroon (deep red)
                text: gold (readable on both halves)
                border: gold/60                                               */}
-          <button
-            onClick={handleToggle}
+          <Link
+            to="/about/founder"
             className="relative z-10 inline-flex items-center gap-2.5 overflow-hidden rounded-full bg-maroon border border-gold/60 px-8 py-3.5 text-sm font-semibold text-gold shadow-2xl shadow-black/50 ring-1 ring-gold/20 transition-all duration-300 hover:scale-[1.03] hover:shadow-gold/20 hover:border-gold focus:outline-none focus-visible:ring-2 focus-visible:ring-gold"
           >
-            {expanded ? (
-              <>
-                <ChevronUp className="h-4 w-4" />
-                Show Less
-              </>
-            ) : (
-              <>
-                More About Rev. Jeldi
-                <ChevronDown className="h-4 w-4" />
-              </>
-            )}
-          </button>
+            More About Rev. Jeldi
+            <ArrowRight className="h-4 w-4" />
+          </Link>
         </div>
 
         {/* ── Expandable Details (CSS grid 1fr trick for smooth height) ─────── */}
