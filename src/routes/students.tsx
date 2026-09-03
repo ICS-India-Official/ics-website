@@ -11,7 +11,7 @@ export const Route = createFileRoute("/students")({
       {
         name: "description",
         content:
-          "Meet the students of the Institute of Christian Studies & Research — men and women training for ministry across C.Th. to Ph.D. programmes.",
+          "Meet the students of the Institute of Christian Studies & Research — men and women training for ministry across B.Th. to Ph.D. programmes.",
       },
       { property: "og:title", content: `Our Students | ${siteConfig.name}` },
       { property: "og:type", content: "website" },

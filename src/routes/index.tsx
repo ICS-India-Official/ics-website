@@ -6,7 +6,6 @@ import { PathwaysSection } from "@/components/site/sections/PathwaysSection";
 import { GallerySection } from "@/components/site/sections/GallerySection";
 import { FounderSection } from "@/components/site/sections/FounderSection";
 import { AdmissionsSection } from "@/components/site/sections/AdmissionsSection";
-import { CampusMapSection } from "@/components/site/sections/CampusMapSection";
 import { Footer } from "@/components/site/Footer";
 import { siteConfig } from "@/config/site";
 
@@ -41,7 +40,6 @@ function Index() {
         <GallerySection />
         <FounderSection />
         <AdmissionsSection />
-        <CampusMapSection />
       </main>
       <Footer />
     </div>
