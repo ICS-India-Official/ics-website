@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
 import { siteConfig } from "@/config/site";
-import { BackToHome } from "@/components/site/BackToHome";
 import { Construction, ArrowLeft, Phone } from "lucide-react";
 
 export const Route = createFileRoute("/about/staff")({
@@ -19,12 +18,8 @@ function StaffPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
-      <main className="min-h-[75vh] px-4 pt-32 pb-20">
-        <div className="mx-auto max-w-xl">
-          <div className="mb-6">
-            <BackToHome />
-          </div>
-          <div className="text-center">
+      <main className="flex min-h-[75vh] items-center justify-center px-4 pt-32 pb-20">
+        <div className="mx-auto max-w-md text-center">
           <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-gold/40 bg-gold/10 text-gold shadow-lg shadow-gold/10">
             <Construction className="h-8 w-8 animate-pulse" />
           </div>
@@ -59,7 +54,6 @@ function StaffPage() {
               <Phone className="h-4 w-4" />
               WhatsApp Office
             </a>
-          </div>
           </div>
         </div>
       </main>

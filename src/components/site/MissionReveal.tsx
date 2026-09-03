@@ -55,7 +55,7 @@ export function MissionReveal() {
     <div id="vision" ref={containerRef} className="relative h-[185vh] w-full scroll-mt-24">
       {/* Sticky container centers the heading & statement during the scroll */}
       <div className="sticky top-0 flex h-screen w-full flex-col items-center justify-center px-4 sm:px-6">
-        <div className="mb-6 sm:mb-8 text-center">
+        <div className="w-full max-w-5xl mb-6 sm:mb-8 text-left">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">
             Foundation & Purpose
           </p>

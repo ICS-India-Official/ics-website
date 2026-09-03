@@ -4,7 +4,6 @@ import { Footer } from "@/components/site/Footer";
 import { founderData } from "@/data/founder";
 import pastorImg from "@/assets/pastor-david-anil-kumar.png";
 import { siteConfig } from "@/config/site";
-import { BackToHome } from "@/components/site/BackToHome";
 import {
   GraduationCap,
   Award,
@@ -39,12 +38,9 @@ function FounderPage() {
         {/* Maroon Hero Section */}
         <section className="bg-maroon pt-32 pb-16 text-maroon-foreground sm:pt-40 sm:pb-24">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
-            <div className="mb-6 flex items-center justify-between">
-              <BackToHome className="border-white/20 bg-black/40 text-gold hover:bg-gold hover:text-black" />
-              <div className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-gold">
-                <Compass className="h-3.5 w-3.5" />
-                About Us · Leadership
-              </div>
+            <div className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+              <Compass className="h-3.5 w-3.5" />
+              About Us · Leadership
             </div>
 
             <div className="mt-8 grid gap-10 lg:grid-cols-12 lg:items-start lg:gap-14">

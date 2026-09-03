@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
 import { StudentsDirectory } from "@/components/site/sections/StudentsDirectory";
-import { BackToHome } from "@/components/site/BackToHome";
 import { siteConfig } from "@/config/site";
 
 export const Route = createFileRoute("/students")({
@@ -26,9 +25,6 @@ function StudentsPage() {
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
       <main className="pt-28 sm:pt-36">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 mb-4">
-          <BackToHome />
-        </div>
         <StudentsDirectory />
       </main>
       <Footer />
