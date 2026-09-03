@@ -13,14 +13,12 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as AdminRouteImport } from './routes/admin'
 import { Route as ApplyRouteImport } from './routes/apply'
-import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as StudentsRouteImport } from './routes/students'
 import { Route as AboutIndexRouteImport } from './routes/about/index'
 import { Route as AboutAdvisorRouteImport } from './routes/about/advisor'
 import { Route as AboutFacultyRouteImport } from './routes/about/faculty'
 import { Route as AboutFounderRouteImport } from './routes/about/founder'
 import { Route as AboutStaffRouteImport } from './routes/about/staff'
-import { Route as AboutVisionRouteImport } from './routes/about/vision'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -40,11 +38,6 @@ const AdminRoute = AdminRouteImport.update({
 const ApplyRoute = ApplyRouteImport.update({
   id: '/apply',
   path: '/apply',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const GalleryRoute = GalleryRouteImport.update({
-  id: '/gallery',
-  path: '/gallery',
   getParentRoute: () => rootRouteImport,
 } as any)
 const StudentsRoute = StudentsRouteImport.update({
@@ -77,37 +70,28 @@ const AboutStaffRoute = AboutStaffRouteImport.update({
   path: '/staff',
   getParentRoute: () => AboutRoute,
 } as any)
-const AboutVisionRoute = AboutVisionRouteImport.update({
-  id: '/vision',
-  path: '/vision',
-  getParentRoute: () => AboutRoute,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRouteWithChildren
   '/admin': typeof AdminRoute
   '/apply': typeof ApplyRoute
-  '/gallery': typeof GalleryRoute
   '/students': typeof StudentsRoute
   '/about/advisor': typeof AboutAdvisorRoute
   '/about/faculty': typeof AboutFacultyRoute
   '/about/founder': typeof AboutFounderRoute
   '/about/staff': typeof AboutStaffRoute
-  '/about/vision': typeof AboutVisionRoute
   '/about/': typeof AboutIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/admin': typeof AdminRoute
   '/apply': typeof ApplyRoute
-  '/gallery': typeof GalleryRoute
   '/students': typeof StudentsRoute
   '/about/advisor': typeof AboutAdvisorRoute
   '/about/faculty': typeof AboutFacultyRoute
   '/about/founder': typeof AboutFounderRoute
   '/about/staff': typeof AboutStaffRoute
-  '/about/vision': typeof AboutVisionRoute
   '/about': typeof AboutIndexRoute
 }
 export interface FileRoutesById {
@@ -116,13 +100,11 @@ export interface FileRoutesById {
   '/about': typeof AboutRouteWithChildren
   '/admin': typeof AdminRoute
   '/apply': typeof ApplyRoute
-  '/gallery': typeof GalleryRoute
   '/students': typeof StudentsRoute
   '/about/advisor': typeof AboutAdvisorRoute
   '/about/faculty': typeof AboutFacultyRoute
   '/about/founder': typeof AboutFounderRoute
   '/about/staff': typeof AboutStaffRoute
-  '/about/vision': typeof AboutVisionRoute
   '/about/': typeof AboutIndexRoute
 }
 export interface FileRouteTypes {
@@ -132,26 +114,22 @@ export interface FileRouteTypes {
     | '/about'
     | '/admin'
     | '/apply'
-    | '/gallery'
     | '/students'
     | '/about/advisor'
     | '/about/faculty'
     | '/about/founder'
     | '/about/staff'
-    | '/about/vision'
     | '/about/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/admin'
     | '/apply'
-    | '/gallery'
     | '/students'
     | '/about/advisor'
     | '/about/faculty'
     | '/about/founder'
     | '/about/staff'
-    | '/about/vision'
     | '/about'
   id:
     | '__root__'
@@ -159,13 +137,11 @@ export interface FileRouteTypes {
     | '/about'
     | '/admin'
     | '/apply'
-    | '/gallery'
     | '/students'
     | '/about/advisor'
     | '/about/faculty'
     | '/about/founder'
     | '/about/staff'
-    | '/about/vision'
     | '/about/'
   fileRoutesById: FileRoutesById
 }
@@ -174,7 +150,6 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRouteWithChildren
   AdminRoute: typeof AdminRoute
   ApplyRoute: typeof ApplyRoute
-  GalleryRoute: typeof GalleryRoute
   StudentsRoute: typeof StudentsRoute
 }
 
@@ -206,13 +181,6 @@ declare module '@tanstack/react-router' {
       path: '/apply'
       fullPath: '/apply'
       preLoaderRoute: typeof ApplyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/gallery': {
-      id: '/gallery'
-      path: '/gallery'
-      fullPath: '/gallery'
-      preLoaderRoute: typeof GalleryRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/students': {
@@ -257,13 +225,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutStaffRouteImport
       parentRoute: typeof AboutRoute
     }
-    '/about/vision': {
-      id: '/about/vision'
-      path: '/vision'
-      fullPath: '/about/vision'
-      preLoaderRoute: typeof AboutVisionRouteImport
-      parentRoute: typeof AboutRoute
-    }
   }
 }
 
@@ -272,7 +233,6 @@ interface AboutRouteChildren {
   AboutFacultyRoute: typeof AboutFacultyRoute
   AboutFounderRoute: typeof AboutFounderRoute
   AboutStaffRoute: typeof AboutStaffRoute
-  AboutVisionRoute: typeof AboutVisionRoute
   AboutIndexRoute: typeof AboutIndexRoute
 }
 
@@ -281,7 +241,6 @@ const AboutRouteChildren: AboutRouteChildren = {
   AboutFacultyRoute: AboutFacultyRoute,
   AboutFounderRoute: AboutFounderRoute,
   AboutStaffRoute: AboutStaffRoute,
-  AboutVisionRoute: AboutVisionRoute,
   AboutIndexRoute: AboutIndexRoute,
 }
 
@@ -292,7 +251,6 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRouteWithChildren,
   AdminRoute: AdminRoute,
   ApplyRoute: ApplyRoute,
-  GalleryRoute: GalleryRoute,
   StudentsRoute: StudentsRoute,
 }
 export const routeTree = rootRouteImport

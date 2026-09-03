@@ -19,14 +19,16 @@ interface AboutLinkItem {
   label: string;
   sublabel: string;
   to: string;
+  hash?: string;
   icon: LucideIcon;
 }
 
 const ABOUT_LINKS: AboutLinkItem[] = [
   {
     label: "Vision",
-    sublabel: "Mission & theological foundation",
-    to: "/about/vision",
+    sublabel: "Foundation & institutional commitment",
+    to: "/",
+    hash: "vision",
     icon: BookOpen,
   },
   {
@@ -58,7 +60,7 @@ const ABOUT_LINKS: AboutLinkItem[] = [
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
-  const [mobileAboutOpen, setMobileAboutOpen] = useState(true); // Open by default in mobile for easy discovery
+  const [mobileAboutOpen, setMobileAboutOpen] = useState(true);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
   const isHomePage = location.pathname === "/";
@@ -90,7 +92,7 @@ export function Navbar() {
       <header className="fixed inset-x-4 top-4 z-50 mx-auto max-w-6xl rounded-2xl border border-border/40 bg-background/60 shadow-xl shadow-black/40 backdrop-blur-md sm:top-6">
         <nav className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 py-3 sm:px-7 sm:py-3.5">
           <div className="flex min-w-0 items-center gap-3">
-            {/* Top-left Back to Home button on all secondary pages */}
+            {/* Top-left Back to Home button on non-home pages */}
             {!isHomePage && (
               <Link
                 to="/"
@@ -164,10 +166,14 @@ export function Navbar() {
                           const Icon = item.icon;
                           return (
                             <Link
-                              key={item.to}
+                              key={`${item.to}-${item.hash || ""}`}
                               to={item.to}
+                              hash={item.hash}
                               className="group flex items-start gap-3 rounded-xl p-2.5 text-left transition-all hover:bg-gold/10 hover:text-foreground"
-                              onClick={() => setAboutOpen(false)}
+                              onClick={() => {
+                                setAboutOpen(false);
+                                if (item.hash) handleAnchorClick(item.hash);
+                              }}
                             >
                               <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-gold/10 text-gold group-hover:bg-gold group-hover:text-gold-foreground transition-colors">
                                 <Icon className="h-4 w-4" />
@@ -198,7 +204,12 @@ export function Navbar() {
                 Courses
               </Link>
 
-              <Link to="/gallery" className="transition-colors hover:text-foreground">
+              <Link
+                to="/"
+                hash="gallery"
+                onClick={() => handleAnchorClick("gallery")}
+                className="transition-colors hover:text-foreground"
+              >
                 Gallery
               </Link>
             </div>
@@ -310,10 +321,14 @@ export function Navbar() {
                         const Icon = item.icon;
                         return (
                           <Link
-                            key={item.to}
+                            key={`${item.to}-${item.hash || ""}`}
                             to={item.to}
+                            hash={item.hash}
                             className="flex items-center gap-2.5 rounded-md py-2 px-2 text-sm font-medium text-muted-foreground hover:text-gold hover:bg-muted/30"
-                            onClick={() => setMobileMenuOpen(false)}
+                            onClick={() => {
+                              setMobileMenuOpen(false);
+                              if (item.hash) handleAnchorClick(item.hash);
+                            }}
                           >
                             <Icon className="h-4 w-4 text-gold shrink-0" />
                             <div>
@@ -340,9 +355,13 @@ export function Navbar() {
                 </Link>
 
                 <Link
-                  to="/gallery"
+                  to="/"
+                  hash="gallery"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-foreground hover:bg-muted"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    handleAnchorClick("gallery");
+                  }}
                 >
                   Gallery
                 </Link>

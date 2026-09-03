@@ -3,7 +3,7 @@ import { gallery } from "@/data/gallery";
 
 export function GallerySection() {
   return (
-    <section className="bg-cream pt-16 pb-16 text-cream-foreground sm:pt-20 sm:pb-20">
+    <section id="gallery" className="bg-cream scroll-mt-24 pt-16 pb-16 text-cream-foreground sm:pt-20 sm:pb-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <Reveal>
           <h2 className="max-w-2xl text-3xl leading-tight sm:text-5xl">

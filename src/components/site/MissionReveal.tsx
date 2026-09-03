@@ -52,9 +52,18 @@ export function MissionReveal() {
   const lit = progress * WORDS.length;
 
   return (
-    <div ref={containerRef} className="relative h-[105vh] w-full">
-      {/* Sticky container centers the statement during the scroll */}
-      <div className="sticky top-0 flex h-screen w-full items-center justify-center px-4 sm:px-6">
+    <div id="vision" ref={containerRef} className="relative h-[185vh] w-full scroll-mt-24">
+      {/* Sticky container centers the heading & statement during the scroll */}
+      <div className="sticky top-0 flex h-screen w-full flex-col items-center justify-center px-4 sm:px-6">
+        <div className="mb-6 sm:mb-8 text-center">
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">
+            Foundation & Purpose
+          </p>
+          <h2 className="mt-2 font-[family-name:var(--font-display)] text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl">
+            Our Vision
+          </h2>
+        </div>
+
         <p className="w-full max-w-5xl text-center font-[family-name:var(--font-display)] text-2xl font-light leading-relaxed sm:text-3xl md:text-4xl md:leading-[1.45] lg:text-[2.65rem]">
           {WORDS.map((word, i) => {
             const on = i < lit;

@@ -112,34 +112,34 @@ function AdvisorPage() {
                     and internationally.
                   </p>
                   <p>
-                    Dr. Busi has served in theological education for many years, contributing
-                    significantly to theological scholarship, ministerial formation, and the
-                    development of Christian leaders. Through his teaching, academic leadership, and
-                    theological engagement, he has influenced generations of students and church
-                    leaders.
+                    Bishop Emeritus Rev. Dr. Suneel Bhanu Busi has served in theological education
+                    for many years, contributing significantly to theological scholarship,
+                    ministerial formation, and the development of Christian leaders. Through his
+                    teaching, academic leadership, and theological engagement, he has influenced
+                    generations of students and church leaders.
                   </p>
                   <p>
-                    In addition to his academic ministry, Dr. Busi has significant pastoral and
-                    church leadership experience. He served as President and Moderator Bishop of the
-                    Andhra Evangelical Lutheran Church (AELC), providing leadership to one of India's
-                    historic Lutheran churches.
+                    In addition to his academic ministry, Bishop Emeritus Rev. Dr. Suneel Bhanu Busi
+                    has significant pastoral and church leadership experience. He served as
+                    President and Moderator Bishop of the Andhra Evangelical Lutheran Church
+                    (AELC), providing leadership to one of India's historic Lutheran churches.
                   </p>
                   <p>
-                    Bishop Emeritus Dr. Busi has also provided leadership to several important
-                    Christian and theological organizations. He has served in significant
-                    leadership capacities in organizations such as CASA (Churches Auxiliary for
-                    Social Action) and the Church History Association of India (CHAI), Southern
-                    India Branch, among other ecclesiastical, theological, and ecumenical bodies.
-                    Through these roles, he has contributed to theological reflection, church
+                    Bishop Emeritus Rev. Dr. Suneel Bhanu Busi has also provided leadership to
+                    several important Christian and theological organizations. He has served in
+                    significant leadership capacities in organizations such as CASA (Churches
+                    Auxiliary for Social Action) and the Church History Association of India (CHAI),
+                    Southern India Branch, among other ecclesiastical, theological, and ecumenical
+                    bodies. Through these roles, he has contributed to theological reflection, church
                     history, Christian unity, social engagement, and the wider mission of the Church
                     in India.
                   </p>
                   <p>
-                    Dr. Busi has also been actively involved in ecumenical and international
-                    Christian leadership. His ministry has included participation in the wider
-                    Lutheran communion and theological engagement with issues relating to the church,
-                    society, public witness, contextual theology, and the experience of marginalized
-                    communities.
+                    Bishop Emeritus Rev. Dr. Suneel Bhanu Busi has also been actively involved in
+                    ecumenical and international Christian leadership. His ministry has included
+                    participation in the wider Lutheran communion and theological engagement with
+                    issues relating to the church, society, public witness, contextual theology, and
+                    the experience of marginalized communities.
                   </p>
                 </div>
               </div>

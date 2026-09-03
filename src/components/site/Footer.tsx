@@ -51,9 +51,9 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <Link to="/about/vision" className="hover:text-foreground">
+              <a href="#vision" className="hover:text-foreground">
                 Vision
-              </Link>
+              </a>
             </li>
             <li>
               <Link to="/about/founder" className="hover:text-foreground">
@@ -71,9 +71,9 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <Link to="/gallery" className="hover:text-foreground">
+              <a href="#gallery" className="hover:text-foreground">
                 Gallery
-              </Link>
+              </a>
             </li>
             <li>
               <Link to="/apply" className="hover:text-foreground">
