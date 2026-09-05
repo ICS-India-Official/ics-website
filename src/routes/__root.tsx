@@ -97,6 +97,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://icsr.org.in/" },
+      { property: "og:image", content: "https://icsr.org.in/og-image.jpg" },
       // Twitter
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Institute of Christian Studies and Research — Vijayawada" },
@@ -104,6 +105,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         name: "twitter:description",
         content: "NATA-accredited theological college in Vijayawada, Andhra Pradesh.",
       },
+      { name: "twitter:image", content: "https://icsr.org.in/og-image.jpg" },
     ],
     links: [
       { rel: "canonical", href: "https://icsr.org.in/" },
