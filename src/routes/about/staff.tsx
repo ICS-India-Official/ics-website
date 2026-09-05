@@ -8,7 +8,11 @@ export const Route = createFileRoute("/about/staff")({
   head: () => ({
     meta: [
       { title: `Administrative Staff | ${siteConfig.name}` },
-      { name: "description", content: "Administrative staff at the Institute of Christian Studies and Research." },
+      { name: "description", content: "Meet the administrative staff at the Institute of Christian Studies and Research, Vijayawada — supporting student operations and enrolment." },
+      { property: "og:url", content: "https://icsr.org.in/about/staff" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://icsr.org.in/about/staff" },
     ],
   }),
   component: StaffPage,

@@ -8,7 +8,11 @@ export const Route = createFileRoute("/about/faculty")({
   head: () => ({
     meta: [
       { title: `Faculty | ${siteConfig.name}` },
-      { name: "description", content: "Faculty directory of the Institute of Christian Studies and Research." },
+      { name: "description", content: "Meet the faculty of the Institute of Christian Studies and Research — qualified theologians and biblical scholars training ministers in Vijayawada, Andhra Pradesh." },
+      { property: "og:url", content: "https://icsr.org.in/about/faculty" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://icsr.org.in/about/faculty" },
     ],
   }),
   component: FacultyPage,

@@ -12,18 +12,23 @@ import { siteConfig } from "@/config/site";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: `${siteConfig.name} | NATA Theological College` },
+      { title: `${siteConfig.name} | NATA Theological College Vijayawada` },
       {
         name: "description",
         content: siteConfig.description,
       },
-      { property: "og:title", content: `${siteConfig.name} | ${siteConfig.location}` },
+      { property: "og:title", content: `${siteConfig.name} | NATA Theological College` },
       {
         property: "og:description",
-        content: "Formed in the Sanctuary of God — four degree pathways, one mission.",
+        content: "Formed in the Sanctuary of God — six degree pathways from C.Th. to Ph.D., one mission.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://icsr.org.in/" },
+      { property: "og:image", content: "https://icsr.org.in/og-image.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://icsr.org.in/" },
     ],
   }),
   component: Index,

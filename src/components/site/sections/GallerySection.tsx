@@ -24,7 +24,7 @@ export function GallerySection() {
             >
               <img
                 src={item.src}
-                alt={item.label}
+                alt={item.alt}
                 loading="lazy"
                 className="h-full w-full object-cover blur-md scale-105 transition-transform duration-700 group-hover:scale-110"
               />

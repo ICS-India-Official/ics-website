@@ -25,6 +25,13 @@ export const Route = createFileRoute("/about/founder")({
         content:
           "Profile and ministry of Rev. David Anil Kumar Jeldi, Founder and Director of the Institute of Christian Studies and Research, Vijayawada.",
       },
+      { property: "og:title", content: `Rev. David Anil Kumar Jeldi — Founder & Director | ${siteConfig.name}` },
+      { property: "og:description", content: "Profile and ministry of the Founder and Director of ICSR Vijayawada." },
+      { property: "og:type", content: "profile" },
+      { property: "og:url", content: "https://icsr.org.in/about/founder" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://icsr.org.in/about/founder" },
     ],
   }),
   component: FounderPage,

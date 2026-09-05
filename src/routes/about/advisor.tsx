@@ -21,6 +21,12 @@ export const Route = createFileRoute("/about/advisor")({
         content:
           "Bishop Emeritus Rev. Dr. Suneel Bhanu Busi — distinguished theologian, educator, church leader, pastor, ecumenical leader, and Senior Advisor of ICSR.",
       },
+      { property: "og:title", content: `Bishop Emeritus Rev. Dr. Suneel Bhanu Busi — Senior Advisor | ${siteConfig.name}` },
+      { property: "og:description", content: "Distinguished theologian and Senior Advisor of the Institute of Christian Studies and Research, Vijayawada." },
+      { property: "og:url", content: "https://icsr.org.in/about/advisor" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://icsr.org.in/about/advisor" },
     ],
   }),
   component: AdvisorPage,

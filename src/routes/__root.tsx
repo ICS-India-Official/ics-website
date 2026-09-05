@@ -83,19 +83,30 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "NATA-accredited theological college in Vijayawada offering B.Th., M.Div., M.Th. and Ph.D. programs.",
+          "NATA-accredited theological college in Vijayawada, Andhra Pradesh offering C.Th., Dip.Th., B.Th., M.Div., M.Th. and Ph.D. programmes rooted in Scripture.",
       },
       { name: "author", content: "Institute of Christian Studies and Research" },
+      // Google Search Console ownership verification
+      { name: "google-site-verification", content: "google680fb06ad43f3cff" },
+      // Open Graph
+      { property: "og:site_name", content: "Institute of Christian Studies and Research" },
       { property: "og:title", content: "Institute of Christian Studies and Research — Vijayawada" },
       {
         property: "og:description",
-        content: "Training and equipping ministers of the Gospel in Andhra Pradesh.",
+        content: "Training and equipping ministers of the Gospel in Andhra Pradesh since 2005.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://icsr.org.in/" },
+      // Twitter
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Institute of Christian Studies and Research — Vijayawada" },
+      {
+        name: "twitter:description",
+        content: "NATA-accredited theological college in Vijayawada, Andhra Pradesh.",
+      },
     ],
     links: [
+      { rel: "canonical", href: "https://icsr.org.in/" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -107,6 +118,54 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "EducationalOrganization",
+          name: "Institute of Christian Studies and Research",
+          alternateName: "ICSR",
+          url: "https://icsr.org.in/",
+          logo: "https://icsr.org.in/favicon.svg",
+          description:
+            "NATA-accredited theological college in Vijayawada, Andhra Pradesh offering C.Th., Dip.Th., B.Th., M.Div., M.Th. and Ph.D. programmes rooted in Scripture.",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Vijayawada",
+            addressRegion: "Andhra Pradesh",
+            addressCountry: "IN",
+          },
+          telephone: "+919246470242",
+          email: "icsrvja@gmail.com",
+          foundingDate: "2005",
+          founder: {
+            "@type": "Person",
+            name: "Rev. David Anil Kumar Jeldi",
+            jobTitle: "Founder & Director",
+          },
+          hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "Theological Degree Programmes",
+            itemListElement: [
+              { "@type": "Course", name: "Certificate in Theology (C.Th.)", provider: { "@type": "EducationalOrganization", name: "ICSR" } },
+              { "@type": "Course", name: "Diploma in Theology (Dip.Th.)", provider: { "@type": "EducationalOrganization", name: "ICSR" } },
+              { "@type": "Course", name: "Bachelor of Theology (B.Th.)", provider: { "@type": "EducationalOrganization", name: "ICSR" } },
+              { "@type": "Course", name: "Master of Divinity (M.Div.)", provider: { "@type": "EducationalOrganization", name: "ICSR" } },
+              { "@type": "Course", name: "Master of Theology (M.Th.)", provider: { "@type": "EducationalOrganization", name: "ICSR" } },
+              { "@type": "Course", name: "Doctor of Philosophy (Ph.D.)", provider: { "@type": "EducationalOrganization", name: "ICSR" } },
+            ],
+          },
+          accreditedBy: {
+            "@type": "Organization",
+            name: "Nations Association for Theological Accreditation (NATA)",
+          },
+          sameAs: [
+            "https://youtube.com/@studytheologyathome2065",
+          ],
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,

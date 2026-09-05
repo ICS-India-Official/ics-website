@@ -19,6 +19,10 @@ export const Route = createFileRoute("/apply")({
         content: "Complete your application in a few guided minutes. Progress saves automatically.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://icsr.org.in/apply" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://icsr.org.in/apply" },
     ],
   }),
   component: ApplyPage,
